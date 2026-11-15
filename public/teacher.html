@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RAG Quiz — Professor</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="teacher">
+
+  <div id="lobby-screen" class="screen">
+    <h1 class="logo">RAG QUIZ</h1>
+    <p class="tagline">La Prueba del Algodón: ¿Qué es (y qué NO es) un RAG?</p>
+    <div class="pin-box"><span>PIN DE LA PARTIDA</span><strong id="pin"></strong></div>
+    <div><img id="qr" alt="QR per entrar" width="220" height="220"></div>
+    <p id="join-url"></p>
+    <p id="lobby-count" class="progress"></p>
+    <div id="players" class="players-grid"></div>
+    <button id="btn-start" class="btn big" disabled>Començar partida</button>
+  </div>
+
+  <div id="question-screen" class="screen hidden">
+    <p id="t-progress" class="progress"></p>
+    <div class="timer-bar"><div id="t-timer-fill"></div></div>
+    <p id="t-scenario"></p>
+    <p class="q-title">¿Es esto un RAG?</p>
+    <p id="t-answered" class="answered-info"></p>
+    <div id="t-answered-avatars" class="players-grid"></div>
+  </div>
+
+  <div id="reveal-screen" class="screen hidden">
+    <h1 id="r-answer" class="reveal-banner"></h1>
+    <div class="explain">
+      <p><strong>Per què:</strong> <span id="r-why"></span></p>
+      <p><strong>Com funciona:</strong> <span id="r-how"></span></p>
+    </div>
+    <p id="r-counts" class="progress"></p>
+    <div id="r-scoreboard" class="scoreboard"></div>
+    <button id="btn-next" class="btn big"></button>
+  </div>
+
+  <div id="final-screen" class="screen hidden">
+    <h1 class="logo">Resultats finals</h1>
+    <div id="f-podium" class="podium"></div>
+    <ol id="f-ranking" class="ranking"></ol>
+    <button id="btn-restart" class="btn big">Tornar a jugar</button>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/avatars.js"></script>
+  <script src="/teacher.js"></script>
+</body>
+</html>

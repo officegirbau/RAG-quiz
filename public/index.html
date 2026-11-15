@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RAG Quiz — Entrar</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="student">
+
+  <div id="join-screen" class="screen">
+    <h1 class="logo">RAG QUIZ</h1>
+    <p class="tagline">¿Qué es (y qué NO es) un RAG?</p>
+    <form id="join-form">
+      <input id="pin" placeholder="PIN de la partida" inputmode="numeric" autocomplete="off">
+      <input id="nickname" placeholder="El teu nickname" maxlength="15" autocomplete="off">
+      <div class="avatar-picker">
+        <p>Triar el teu avatar</p>
+        <div id="shape-row" class="row"></div>
+        <div id="color-row" class="row"></div>
+        <div id="avatar-preview" class="avatar-preview"></div>
+      </div>
+      <button type="submit" class="btn big">Entrar</button>
+      <p id="join-error" class="error"></p>
+    </form>
+  </div>
+
+  <div id="wait-screen" class="screen hidden">
+    <div id="my-avatar" class="avatar-preview"></div>
+    <h2 id="my-name"></h2>
+    <p>Ja ets dins! Esperant que comenci la partida...</p>
+    <p id="wait-count" class="progress"></p>
+  </div>
+
+  <div id="question-screen" class="screen hidden">
+    <p id="q-progress" class="progress"></p>
+    <div class="timer-bar"><div id="timer-fill"></div></div>
+    <p id="scenario"></p>
+    <p class="q-title">¿Es esto un RAG?</p>
+    <div class="answers">
+      <button id="btn-true" class="answer true">✔ VERDADER</button>
+      <button id="btn-false" class="answer false">✘ FALSO</button>
+    </div>
+    <p id="answered-info" class="answered-info"></p>
+  </div>
+
+  <div id="reveal-screen" class="screen hidden">
+    <h2 id="reveal-result" class="reveal-banner"></h2>
+    <p id="reveal-points"></p>
+    <p id="reveal-score"></p>
+  </div>
+
+  <div id="final-screen" class="screen hidden">
+    <h2>Final!</h2>
+    <div id="my-final"></div>
+    <ol id="final-ranking" class="ranking"></ol>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/avatars.js"></script>
+  <script src="/student.js"></script>
+</body>
+</html>

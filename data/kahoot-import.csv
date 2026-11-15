@@ -1,0 +1,18 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer(s)
+El bot de un banco te obliga a elegir opciones de un menú cerrado (1, 2, 3...). ¿Es esto un RAG?,Verdadero,Falso,,,30,2
+Le pides un chiste a un bot corporativo y repite un mensaje de error en bucle. ¿Es esto un RAG?,Verdadero,Falso,,,30,2
+Preguntas la política de devoluciones y el bot responde de forma conversacional según las normas de la empresa. ¿Es un RAG?,Verdadero,Falso,,,30,1
+Un chatbot open-source te explica con precisión una receta que está en el documento adjunto. ¿Es un RAG?,Verdadero,Falso,,,30,1
+Subes manuales en PDF de una cámara a un Cuaderno de Gemini y le pides qué botones pulsar. ¿Es un RAG?,Verdadero,Falso,,,30,1
+Subes 3.000 fotos de vacaciones al Cuaderno para que las organice por caras. ¿Es un RAG?,Verdadero,Falso,,,30,2
+Subes apuntes de una asignatura y pides test y explicaciones basadas solo en ellos. ¿Es un RAG?,Verdadero,Falso,,,30,1
+Subes tres contratos y pides una tabla comparativa de cláusulas de penalización. ¿Es un RAG?,Verdadero,Falso,,,30,1
+Conectas el Cuaderno a una tienda online para saber el stock en tiempo real. ¿Es un RAG?,Verdadero,Falso,,,30,2
+Subes ordenanzas municipales y pides una guía de FAQ simplificada para propietarios. ¿Es un RAG?,Verdadero,Falso,,,30,1
+Subes un ZIP de 20 GB con ejecutables a NotebookLM para guardarlos por si acaso. ¿Es un RAG?,Verdadero,Falso,,,30,2
+Subes artículos técnicos y pides una nota de prensa citando las fuentes subidas. ¿Es un RAG?,Verdadero,Falso,,,30,1
+Subes síntomas de un paciente y pides diagnóstico definitivo y prescripción. ¿Es un RAG?,Verdadero,Falso,,,30,2
+Subes la transcripción de una reunión y generas un pódcast-resumen en audio. ¿Es un RAG?,Verdadero,Falso,,,30,1
+Subes un vídeo de 2 horas sin transcripción y pides un clip de 30 s con música para TikTok. ¿Es un RAG?,Verdadero,Falso,,,30,2
+Subes relatos y la guía de estilo y pides un cuento nuevo imitando el mismo tono. ¿Es un RAG?,Verdadero,Falso,,,30,1
+Conectas tu WhatsApp personal a NotebookLM para que lea tus conversaciones privadas. ¿Es un RAG?,Verdadero,Falso,,,30,2
