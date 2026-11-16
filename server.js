@@ -58,6 +58,7 @@ function questionState() {
     index: game.index,
     total: QUESTIONS.length,
     scenario: q.scenario,
+    image: q.image || null,
     seconds: QUESTION_SECONDS,
     answeredCount: countAnswered(),
     answeredIds: answeredIds(),

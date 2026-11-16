@@ -33,6 +33,9 @@ function renderQuestion(data) {
   totalQuestions = data.total;
   $('t-progress').textContent = `Pregunta ${data.index + 1} de ${data.total}`;
   $('t-scenario').textContent = data.scenario;
+  const img = $('t-img');
+  if (data.image) { img.src = data.image; img.classList.remove('hidden'); }
+  else { img.removeAttribute('src'); img.classList.add('hidden'); }
   $('t-answered').textContent = `Han respost 0 de ${data.playerCount}`;
   $('t-answered-avatars').innerHTML = '';
   startCountdown(data.seconds);

@@ -99,6 +99,9 @@ function onQuestion(data) {
   answeredThisQuestion = false;
   $('q-progress').textContent = `Pregunta ${data.index + 1} de ${data.total}`;
   $('scenario').textContent = data.scenario;
+  const img = $('q-img');
+  if (data.image) { img.src = data.image; img.classList.remove('hidden'); }
+  else { img.removeAttribute('src'); img.classList.add('hidden'); }
   $('answered-info').textContent = '';
   $('btn-true').disabled = false;
   $('btn-false').disabled = false;

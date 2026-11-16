@@ -221,6 +221,16 @@ ol.ranking {
 
 .progress { font-weight: 700; opacity: .85; }
 
+.q-img {
+  display: block;
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 12px;
+  margin: 12px auto;
+  box-shadow: 0 4px 16px rgba(0,0,0,.35);
+}
+.q-img.small { max-height: 200px; }
+
 @media (max-width: 600px) {
   .answers { flex-direction: column; }
   .logo { font-size: 2.2rem; }

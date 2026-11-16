@@ -1,47 +1,55 @@
 const QUESTIONS = [
   {
+    image: "/img/q01.png",
     scenario: "Entras a la web de un banco. Escribes tu problema y el bot te obliga a elegir entre opciones de un menú cerrado (1, 2, 3...).",
     answer: false,
     why: "Es un chatbot rudimentario de Generación 1.",
     how: "Se basa en reglas fijas, palabras clave exactas y árboles de decisión rígidos. No hay IA generativa detrás."
   },
   {
+    image: "/img/q02.png",
     scenario: "Haces la prueba Off-topic: le pides a un bot corporativo que te cuente un chiste o te dé una opinión personal. Se bloquea y repite un mensaje de error en bucle.",
     answer: false,
     why: "Incapacidad de salir del guion.",
     how: "Al no encontrar la palabra clave programada en su base de datos estática, el sistema colapsa. No razona ni entiende lenguaje natural."
   },
   {
+    image: "/img/q03.png",
     scenario: "Preguntas (in-topic): ¿Cuál es la política si devuelvo un producto abierto hace 14 días? El bot entiende el contexto y te da una respuesta útil y conversacional basada en las normas de la empresa.",
     answer: true,
     why: "Generación Augmentada por Recuperación.",
     how: "Convierte tu duda en vectores, busca semánticamente en los documentos internos de la empresa y genera una respuesta real y actualizada sin alucinar."
   },
   {
+    image: "/img/q04.png",
     scenario: "Usas el chatbot de cocina open-source (Mistral). Le pides una receta que está exactamente en el documento adjunto y te la explica con precisión quirúrgica.",
     answer: true,
     why: "Conexión directa a una base de conocimiento propia.",
     how: "El modelo de lenguaje (LLM) recibe la instrucción estricta de responder únicamente utilizando la información de los fragmentos recuperados de tu recetario."
   },
   {
+    image: "/img/q05.png",
     scenario: "Subes 5 manuales de instrucciones en PDF de una cámara antigua a un Cuaderno de Gemini y le pides: «Dime exactamente qué botones pulsar para el modo nocturno».",
     answer: true,
     why: "Es el uso ideal de NotebookLM.",
     how: "Actúa como un cerebro documental. Busca en los textos subidos y extrae la respuesta exacta, citando la fuente original."
   },
   {
+    image: "/img/q06.png",
     scenario: "Subes 3.000 fotografías de tus vacaciones de verano al Cuaderno de Gemini esperando que organice las fotos por caras o aplique filtros visuales.",
     answer: false,
     why: "Un Cuaderno no es una galería multimedia.",
     how: "RAG en este contexto está diseñado para análisis, síntesis y consulta de texto y documentos. Para imágenes necesitas herramientas como Google Photos o Lightroom."
   },
   {
+    image: "/img/q07.png",
     scenario: "Subes todos los apuntes en PDF de una asignatura y le pides que genere ejemplos tipo test y explique conceptos difíciles basándose solo en tus apuntes.",
     answer: true,
     why: "Síntesis y recuperación controlada.",
     how: "Transforma información fragmentada en material de estudio estructurado, asegurando que no inventa datos fuera del temario."
   },
   {
+    image: "/img/q08.png",
     scenario: "Subes tres contratos laborales o normativas diferentes y pides una tabla comparativa de las cláusulas de penalización.",
     answer: true,
     why: "Capacidad de cruzar datos complejos.",
