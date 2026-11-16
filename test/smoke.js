@@ -53,6 +53,12 @@ async function main() {
     const dup = await emitAck(s2, 'join', { pin, name: 'anna', avatar: { shape: 'star', color: '#1368ce' } });
     check(dup && dup.error, 'nickname duplicat rebutjat');
 
+    const qrRes = await new Promise((resolve, reject) => {
+      const t = setTimeout(() => reject(new Error("timeout a l'ack de 'needQr'")), 5000);
+      teacher.emit('needQr', { url: `http://localhost:${PORT}/?pin=${pin}`, local: true }, (res) => { clearTimeout(t); resolve(res); });
+    });
+    check(qrRes.qr && qrRes.url && !qrRes.url.includes('localhost'), `QR amb IP de xarxa, no localhost (${qrRes.url})`);
+
     const q1 = waitFor(s1, 'question');
     const q2 = waitFor(s2, 'question');
     teacher.emit('start');

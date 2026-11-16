@@ -99,9 +99,10 @@ function renderFinal(data) {
 socket.on('hello', (data) => {
   totalQuestions = data.lobby.total;
   $('pin').textContent = data.pin;
+  const local = ['localhost', '127.0.0.1', '[::1]', '::1'].includes(location.hostname);
   const joinUrl = `${location.origin}/?pin=${data.pin}`;
-  $('join-url').textContent = joinUrl;
-  socket.emit('needQr', { url: joinUrl }, (res) => {
+  socket.emit('needQr', { url: joinUrl, local }, (res) => {
+    if (res && res.url) $('join-url').textContent = res.url;
     if (res && res.qr) $('qr').src = res.qr;
   });
   if (data.question) renderQuestion(data.question);

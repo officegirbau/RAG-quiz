@@ -1,6 +1,7 @@
 const express = require('express');
 const http = require('http');
 const path = require('path');
+const os = require('os');
 const { Server } = require('socket.io');
 const QRCode = require('qrcode');
 const { QUESTIONS } = require('./questions');
@@ -17,7 +18,7 @@ const io = new Server(server);
 app.use(express.static(path.join(__dirname, 'public')));
 
 const game = {
-  pin: String(Math.floor(100000 + Math.random() * 900000)),
+  pin: process.env.QUIZ_PIN || String(Math.floor(100000 + Math.random() * 900000)),
   phase: 'lobby',
   index: -1,
   questionStartsAt: 0,
@@ -62,6 +63,15 @@ function questionState() {
     answeredIds: answeredIds(),
     playerCount: game.players.size
   };
+}
+
+function lanIp() {
+  for (const list of Object.values(os.networkInterfaces())) {
+    for (const i of list) {
+      if (i.family === 'IPv4' && !i.internal) return i.address;
+    }
+  }
+  return null;
 }
 
 function sortedPlayers() {
@@ -194,12 +204,23 @@ io.on('connection', (socket) => {
     if (game.players.size > 0 && countAnswered() === game.players.size) reveal();
   });
 
-  socket.on('needQr', async ({ url }, cb) => {
+  socket.on('needQr', async ({ url, local }, cb) => {
+    let target = String(url || '');
+    if (local) {
+      const ip = lanIp();
+      if (ip) {
+        try {
+          const u = new URL(target);
+          u.hostname = ip;
+          target = u.toString();
+        } catch {}
+      }
+    }
     try {
-      const dataUrl = await QRCode.toDataURL(String(url || ''), { width: 320, margin: 1 });
-      cb({ qr: dataUrl });
+      const dataUrl = await QRCode.toDataURL(target, { width: 320, margin: 1 });
+      cb({ qr: dataUrl, url: target });
     } catch {
-      cb({ qr: null });
+      cb({ qr: null, url: target });
     }
   });
 

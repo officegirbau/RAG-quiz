@@ -28,6 +28,9 @@ Per saber la teva IP: `ip addr` o `ipconfig` (Windows). Si el firewall bloqueja 
 - **Preguntes**: edita `questions.js` (escenari, resposta `true`/`false`, «why» i «how»).
 - **Segons per pregunta**: `QUESTION_SECONDS` a `server.js`.
 - **Puntuació**: `BASE_POINTS` i `SPEED_POINTS` a `server.js`.
+- **PIN fix**: per defecte el PIN canvia a cada arrencada. Per fixar-lo: `QUIZ_PIN=123456 npm start` (a Windows: `set QUIZ_PIN=123456` i després `npm start`).
+
+El codi QR i la URL d'entrada que es mostren al projector usen automàticament la **IP local de l'ordinador** (no `localhost`), perquè els mòbils hi puguin entrar.
 
 ## Desplegament en línia (opcional)
 
