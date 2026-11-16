@@ -112,6 +112,7 @@ const QUESTIONS = [
     how: "Indexa no solo hechos, sino el tono y la sintaxis de los documentos recuperados, instruyendo al LLM para mimetizar ese contexto específico."
   },
   {
+    image: "/img/q17.png",
     scenario: "Intentas conectar tu cuenta personal de WhatsApp en tiempo real a NotebookLM para que lea todas tus conversaciones privadas y te organice automáticamente la agenda del año.",
     answer: false,
     why: "Violación del RGPD y de la privacidad (límite legal y técnico).",
