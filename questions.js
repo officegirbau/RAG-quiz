@@ -56,48 +56,56 @@ const QUESTIONS = [
     how: "El RAG recupera los fragmentos semánticamente similares de los 3 documentos simultáneamente y el LLM los formatea en una matriz comparativa."
   },
   {
+    image: "/img/q09.png",
     scenario: "Conectas el Cuaderno a una tienda online para preguntarle en tiempo real: ¿Quedan camisetas de la talla M ahora mismo en la tienda física de Girona?",
     answer: false,
     why: "No es una base de datos transaccional.",
     how: "Un RAG documental trabaja con archivos estáticos indexados previamente. Para inventarios en vivo al minuto se necesitan sistemas ERP o bases de datos tradicionales."
   },
   {
+    image: "/img/q10.png",
     scenario: "Subes las ordenanzas municipales sobre terrazas de bar de un ayuntamiento y le pides que elabore una guía simplificada de Preguntas Frecuentes (FAQ) para los propietarios.",
     answer: true,
     why: "Estructuración de información densa.",
     how: "Entiende el lenguaje técnico legal y lo traduce a lenguaje natural accesible, manteniendo la fidelidad a la norma original."
   },
   {
+    image: "/img/q11.png",
     scenario: "Subes un archivo comprimido .ZIP de 20 GB con ejecutables y copias de seguridad para guardarlos en NotebookLM por si acaso.",
     answer: false,
     why: "No es un cajón de sastre ni un sistema de almacenamiento masivo.",
     how: "Subir archivos sin texto útil (como .exe) es inútil para la indexación vectorial. Para esto existen Google Drive o Dropbox."
   },
   {
+    image: "/img/q12.png",
     scenario: "Alimentas el Cuaderno con artículos de investigación técnica y le pides que redacte una nota de prensa coherente, en tono periodístico, citando las fuentes subidas.",
     answer: true,
     why: "Generación guiada por contexto.",
     how: "El LLM aplica su conocimiento de cómo escribir una nota de prensa (formato/rol) pero extrae el qué (los datos) exclusivamente de tus artículos indexados."
   },
   {
+    image: "/img/q13.png",
     scenario: "Subes un listado de síntomas complejos de un paciente y le pides al sistema que emita un diagnóstico clínico definitivo y prescriba un tratamiento.",
     answer: false,
     why: "No sustituye el criterio humano experto (límite ético y funcional → human-in-the-loop).",
     how: "Aunque puede analizar documentos médicos, los sistemas RAG no están diseñados para tomar decisiones críticas, legales o médicas sin supervisión humana."
   },
   {
+    image: "/img/q14.png",
     scenario: "Subes la transcripción o el acta de una reunión larguísima y utilizas NotebookLM para generar automáticamente un resumen en formato de audio (pódcast conversacional) para escucharlo caminando.",
     answer: true,
     why: "Análisis de texto transformado a audio.",
     how: "La base del proceso sigue siendo puramente textual/documental. Recupera las ideas clave del texto y las pasa por un sintetizador de voz generativo."
   },
   {
+    image: "/img/q15.png",
     scenario: "Subes un vídeo de 2 horas sin transcripción a NotebookLM y le pides que recorte un clip dinámico de 30 segundos con efectos y música para subir a TikTok.",
     answer: false,
     why: "Carece de capacidades de edición espacial/temporal.",
     how: "Un RAG documental no ve el vídeo ni edita metraje. Necesitas herramientas específicas de edición audiovisual (como CapCut o Premiere)."
   },
   {
+    image: "/img/q16.png",
     scenario: "Subes un libro de relatos cortos y la guía de estilo de tu marca, y le pides que escriba un nuevo cuento corto imitando exactamente el mismo tono de voz y vocabulario.",
     answer: true,
     why: "Recuperación semántica de patrones de estilo.",
