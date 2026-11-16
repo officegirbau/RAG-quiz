@@ -232,7 +232,12 @@ ol.ranking {
 .q-img.small { max-height: 200px; }
 
 @media (max-width: 600px) {
-  .answers { flex-direction: column; }
+  .answers { flex-direction: column; gap: 10px; }
   .logo { font-size: 2.2rem; }
-  #scenario { font-size: 1.2rem; }
+  #scenario { font-size: 1.05rem; margin: 10px auto; }
+  .q-title { margin-bottom: 8px; }
+  .q-img.small { max-height: 130px; }
+  .timer-bar { margin: 8px auto; }
+  .answer { padding: 18px 10px; font-size: 1.3rem; }
+  .screen { padding: 14px 12px 32px; }
 }
