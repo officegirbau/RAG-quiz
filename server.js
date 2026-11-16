@@ -16,6 +16,7 @@ const server = http.createServer(app);
 const io = new Server(server);
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.get('/teacher', (req, res) => res.redirect('/teacher.html'));
 
 const game = {
   pin: process.env.QUIZ_PIN || String(Math.floor(100000 + Math.random() * 900000)),
